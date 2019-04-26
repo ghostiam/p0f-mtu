@@ -69,6 +69,8 @@ struct p0f_api_response {
 
   u8  language[P0F_STR_MAX + 1];        /* Language                           */
 
+  u8  raw_sig_dump[128];
+
 } __attribute__((packed));
 
 #ifdef _FROM_P0F

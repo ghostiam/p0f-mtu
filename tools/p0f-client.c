@@ -211,6 +211,8 @@ int main(int argc, char** argv) {
          r.up_mod_days);
   }
 
+  SAYF("raw_sig_dump  = %s\n", r.raw_sig_dump);
+
   return 0;
 
 }

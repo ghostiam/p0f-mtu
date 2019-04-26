@@ -103,6 +103,8 @@ void handle_query(struct p0f_api_query* q, struct p0f_api_response* r) {
   r->distance    = h->distance;
   r->os_match_q  = h->last_quality;
 
-  if (h->last_up_min != -1) r->uptime_min = h->last_up_min;
+  if (h->last_syn->raw_sig_dump)
+    strncpy((char*)r->raw_sig_dump, (char*)h->last_syn->raw_sig_dump, 128);
 
+  if (h->last_up_min != -1) r->uptime_min = h->last_up_min;
 }

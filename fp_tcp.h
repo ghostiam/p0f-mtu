@@ -44,6 +44,7 @@ struct tcp_sig {
   u8  fuzzy;                            /* Approximate match?                 */
   u8  dist;                             /* Distance                           */
 
+  u8 raw_sig_dump[128];
 };
 
 /* Methods for matching window size in tcp_sig: */
